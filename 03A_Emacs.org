@@ -1,0 +1,92 @@
+# #+TITLE: Digital Biology
+#+AUTHOR: Rodolfo Aramayo
+#+EMAIL: raramayo@tamu.edu
+#+STARTUP: align
+*Emacs*
++ *[[http://edward.oconnor.cx/2009/07/learn-emacs-in-ten-years][The Editor of a Lifetime]]*
++ *Compiling_Emacs*
+ + [[https://www.gnu.org/software/emacs/index.html][GNU Emacs]]
+   : cd
+   : mkdir -p Documents/codecache && cd ./Documents/codecache
+   : wget http://ftp.gnu.org/gnu/emacs/emacs-25.3.tar.gz
+   : tar -xzvf emacs-25.3.tar.gz
+   : cd emacs-25.3
+   : ./configure --prefix=/home/username/software --with-png=no --with-gif=no --with-tiff=no
+   : make
+   : make check
+   : make install
+ + Add the following to the *.bash_profile*
+  + If the file *.bash_profile* does not exist, "touch" it
+    : if [ -f $HOME/.bashrc ]; then
+    : . $HOME/.bashrc
+    : fi
+    : 
+    : if [ -f  $HOME/.bash_aliases ]; then
+    : .  $HOME/.bash_aliases
+    : fi
+    : # Load_Editor
+    :  export EDITOR=/home/username/software/bin/emacs
+    :  export ALTERNATE_EDITOR=/home/username/software/bin/emacs/emacsclient
++ *Basic_Emacs*
+ + [[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][Emacs_Reference_Card]]
+ + [[https://www.gnu.org/software/emacs/refcards/pdf/survival.pdf][Emacs_Survival_Guide]]
+ + [[https://www.gnu.org/software/emacs/manual/pdf/emacs.pdf][Emacs_Manual]]
++ [[http://en.flossmanuals.net/command-line/emacs/][Basic editing commands]]
+ + Once Emacs is running, there are a number of basic editing commands you can use. We use a notation like *ctrl + x* to denote depressing the Ctrl
+   (Control) key, then pressing the x key while Ctrl is depressed, then releasing both keys. We employ the notation used in the Emacs documentation,
+   which abbreviates *ctrl + x* as *C-x*
+ + *C-x C-f (load file into buffer)*
+  + The command *C-x C-f* (press the Ctrl key, press and release x, press and release f, release
+    Ctrl) loads a file on disk into an Emacs buffer (an Emacs working area) for editing.  You are
+    prompted for the name of the file to load.  You may then make changes to the buffer by typing
+    and by using other Emacs commands.  The buffer is not saved to a file on disk until you
+    specifically request it with, for example, the *C-x C-s* command
+ + *C-x C-s (save buffer to file)*
+  + The command *C-x C-s* saves the current Emacs buffer to disk as the currently named file.  The
+    name of the file is located on a bar at the bottom of the window
+ + *C-x C-c (exit Emacs)*
+  + This command exits Emacs.  If buffers remain that are unsaved, Emacs asks you whether you want
+    to save them
+ + *C-h t (start the Emacs tutorial)*
+  + The command *C-h t* (press the Ctrl key, press and release h, release Ctrl, press and release t) starts the Emacs tutorial.  This takes you step-by-step through some basic Emacs commands
+ + *C-h ? (general help)*
+  + This command offers a number of help options
+ + *C-k (kill line)*
+  + The command *C-k* kills (deletes) the current line in the current buffer from the cursor to the
+    end of the line
+ + *C-y (yank back line)*
+  + This command "yanks back" the most recently killed line or set of lines and pastes it into the current cursor position
+------------
++ *Advanced_Emacs*
+ + [[https://www.gnu.org/software/emacs/refcards/pdf/dired-ref.pdf][Emacs_Dired_Mode]]
+ + [[https://www.youtube.com/watch?v=MRYzPWnk2mE&index=1&list=PLxj9UAX4Em-IiOfvF2Qs742LxEK4owSkr][.Emacs #1 - Getting Started and Playing Games]]
+ + [[https://www.youtube.com/watch?v=mMcc0IF1hV0&index=2&list=PLxj9UAX4Em-IiOfvF2Qs742LxEK4owSkr][.Emacs #2 - Customizations and Themes]]
+ + [[https://www.youtube.com/watch?v=Cf6tRBPbWKs&index=3&list=PLxj9UAX4Em-IiOfvF2Qs742LxEK4owSkr][.Emacs #3 - Installing Packages and Extensions]]
+ + [[https://www.youtube.com/watch?v=7jZdul2fC94&index=4&list=PLxj9UAX4Em-IiOfvF2Qs742LxEK4owSkr][.Emacs #4 - Exploring the Filesystem with Dired]]
+ + [[https://www.youtube.com/watch?v=JsggDFtAA78&index=5&list=PLxj9UAX4Em-IiOfvF2Qs742LxEK4owSkr][.Emacs #5 - Managing and Finding Buffers]]
+ + [[https://www.youtube.com/watch?v=bIE95Wc-kmg&index=6&list=PLxj9UAX4Em-IiOfvF2Qs742LxEK4owSkr][.Emacs #6 - Searching and Finding Files]]
+ + [[https://www.youtube.com/watch?v=U2Rl23-_ePw&index=7&list=PLxj9UAX4Em-IiOfvF2Qs742LxEK4owSkr][.Emacs #7 - The Command Line]]
+------------
+*Org-Mode*
++ [[https://www.gnu.org/software/emacs/refcards/pdf/orgcard.pdf][Org-Mode-Ref-Card]]
+------------
+1. Add your ssh key to GitHub.tamu.edu
+2. clone your repo
+   : $ git clone ...
+3. Re-name the "*README.md*" to "*README.org*"
+4. Open "*README.org*" with emacs
+5. Add the following to the file:
+   : # #+TITLE: Digital Biology
+   : #+AUTHOR: Your Name
+   : #+EMAIL: Your Email
+   : #+STARTUP: align
+6. Start taking notes in that file
+7. Save and commit 
+8. Manual and Tutorials
+   + [[http://orgmode.org/manual/][Org-Mode Manual]]
+   + [[https://www.youtube.com/watch?v%3DbzZ09dAbLEE][Taking Notes In Emacs Org-Mode]]
+   + [[https://www.youtube.com/watch?v%3DCGnt_PWoM5Y][Org-mode for Reproducible Research]]
+------------
++ *Authors:* Rodolfo Aramayo - raramayo@tamu.edu
+------------
++ *License:* [[http://creativecommons.org/licenses/by-nc-sa/3.0/][All content produced in this site is licensed by: CC BY-NC-SA 3.0]]

@@ -1,0 +1,125 @@
+# #+TITLE: Digital Biology
+#+AUTHOR: Rodolfo Aramayo
+#+EMAIL: raramayo@tamu.edu
+#+STARTUP: align
+*SSH:SecureSHell*
++ Secure Shell is a cryptographic network protocol for secure data communication, remote
+  command-line login, remote command execution, and other secure network services between two
+  networked computers [[http://en.wikipedia.org/wiki/Secure_Shell][Source: Wikipedia]]
++ Most SSH connections are driven by [[http://www.openssh.com/][OpenSSH]]
+*SSH Basics*
+#   + *[[http://www.lynda.com/Developer-Network-Administration-tutorials/What-SSH/189066/365614-4.html][SSH]]*
+#   + *[[http://www.lynda.com/Developer-Network-Administration-tutorials/Connecting-SSH-server-from-Mac-OS-X-Linux/189066/365616-4.html][Connecting to an SSH server from Mac OS X or Linux]]*
+# + *Using SSH Keys*
+#   + *[[http://www.lynda.com/Developer-Network-Administration-tutorials/Using-key-more-secure-access/189066/365618-4.html][Using a key for more-secure access]]*
+#   + *[[http://www.lynda.com/Developer-Network-Administration-tutorials/Generating-key-pair-Mac-OS-X-Linux/189066/365619-4.html][Generating a key pair on Mac OS X or Linux]]*
+#   + *[[http://www.lynda.com/Developer-Network-Administration-tutorials/Connecting-SSH-server-from-Mac-OS-X-Linux-using-key/189066/365620-4.html][Connecting to an SSH server from Mac OS X and Linux using a key]]*
+------------
+*SSH Into genomics08*
+
+: $ Computer name: "genomics08.bio.tamu.edu"
+: $ Username: "YourNETIDUserName"
+: $ Password: "YourNETIDPasswd"
+
++ Command:
+
+: $ ssh xxxx@genomics08.bio.tamu.edu
+
++ Once you access the computer:
+  1. Verify where you are:
+     + Get the *IP_address* for the computer you are located
+       : $ ifconfig
+
+     + Verify the architecture of the machine:
+       : $ uname -a
+
+------------
+*Generating SSH Keys for your Account*
+1. Why should we use SSH keys?
+   + More secure than password access
+   + Key Pair: Public Key and Private Key
+   + Server holds the public key, you keep the private key
+   + One Key versus Many Keys, considerations
+2. Check for SSH keys in your Account
+   : $ cd ~/.ssh
+   :  $ ls -al # <-Lists the files in your .ssh directory
+
+   + Check the directory listing to see if you have files named either *id_rsa.pub* or *id_dsa.pub*
+     + You should NOT have neither of those files
+     + If you do *delete them*
+3. Generate a new SSH key
+   + To generate a new SSH key, copy and paste the text below. The default settings are preferred, so when you're asked to "enter a file in which to
+     save the key," just press enter to continue
+     : $ ssh-keygen -t rsa -b 4096 -f id_rsa -P ''
+     :   Where:
+     :         ssh-keygen <-Command
+     :         -t rsa     <-Encryption protocol
+     :         -b 4096    <-Key Size in bytes
+     :         -f id_rsa  <-File name
+     :         -P ''      <-Password to Unlock the key
+4. Follow my instructions for 1024 and 2048 bytes keys
+5. Transferring keys to a new server
+   + Preferred method
+     : $ ssh-copy-id username@mdcs.tamu.edu
+   + Secure-Copy Method
+     1. 
+       : $ scp ./id_rsa.pub username@mdcs.tamu.edu:
+     2. 
+       : mkdir .ssh
+     3. 
+       : cat id_rsa.pub > ./.ssh/authorized_keys
+ # Setting up a config file
+ # ./.ssh/config
+ # Host g08
+ #      User raramayo
+ #      HostName genomics08.bio.tamu.edu
+ #      IdentityFile /home/raramayo/.ssh/id_rsa
+6. SSH File Transfer Protocol (SFTP)
+   1. Using [[https://filezilla-project.org/][Filezilla]]
+   2. Copying files to your accounts
+   3. Connecting via terminal
+      : sftp username@mdcs.tamu.edu
+      : sftp -oPort=22 username@mdcs.tamu.edu #<-To specify a different port
+
+     # + Then add your new key to the ssh-agent:
+     #  ```sh
+     #  $ ssh-add ~/.ssh/id_rsa
+     #  ```
+  # + Step 3: Copy your *id_rsa.pub* public key into memory
+  #   ```sh
+  #   $ cat id_rsa.pub
+  #   or
+  #   $ cat ~/.ssh/id_rsa.pub
+  #   ```
+  #   + This is your SSH key
+  #   + Select all and copy to your clipboard
+  # + Step 4: Log Into GitHub via web interface
+  #   + Go to:
+  #    ```sh
+  #    $ https://genomics03.bio.tamu.edu/gitlab/raramayo/db_your_name/deploy_keys
+  #    # where: your_name is your Name
+  #    ```
+  # + Step 5: Add the *id_rsa.pub* key to GitLab
+  #  ```sh
+  #   1. In the top-right corner of the GitLab page click "+ New Deploy Key"
+  #   2. Give it a name
+  #   3. Paste your key into the "Key" field
+  #   4. Click Add key
+  #  ```
+  # + Step 6: Test everything out
+  #   + To make sure everything is working, you'll now try SSHing to GitLab
+  #     + Open up the command line and type:
+  #      ```sh
+  #      $ ssh -T git@genomics03.bio.tamu.edu
+  #      # Attempts to ssh to github
+  #      ```
+  #   + You may see the following:
+  #    ```sh
+  #    $ Warning: Permanently added 'genomics03.bio.tamu.edu,165.91.108.209' (ECDSA) to the list of known hosts.
+  #     Welcome to GitLab, Anonymous!
+  #    ```
+  #   + If this is the case, then you have successfully set up your SSH key!
+------------
++ *Authors:* Rodolfo Aramayo - raramayo@tamu.edu
+------------
++ *License:* [[http://creativecommons.org/licenses/by-nc-sa/3.0/][All content produced in this site is licensed by: CC BY-NC-SA 3.0]]

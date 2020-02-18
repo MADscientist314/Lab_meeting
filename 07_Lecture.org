@@ -1,0 +1,14 @@
+# #+TITLE: Digital Biology
+#+AUTHOR: Rodolfo Aramayo
+#+EMAIL: raramayo@tamu.edu
+#+STARTUP: align
+# Mapping and Visualization
+*Mapping and Visualization*
+
++ Setting Up Ada environment
+  + Loading Git abd setting repository keys
+  + Loading emacs
+  + Creating working directories
++ [[https://portal.hprc.tamu.edu/pun/sys/dashboard/batch_connect/sessions][TAMU HPRC OnDemand]]
++ [[https://www.bioinformatics.babraham.ac.uk/projects/fastqc/][FastQC]]
++ Important PATH /scratch/datasets/GCATemplates/data/miseq/c_dubliniensis/DR34_R1_fastqc

@@ -1,0 +1,12 @@
+# #+TITLE: Digital Biology
+#+AUTHOR: Rodolfo Aramayo
+#+EMAIL: raramayo@tamu.edu
+#+STARTUP: align
+# Version Control - GIT
+*Version Control - GIT*
+
+*GIT101*
++ [[https://www.git-scm.com/][GIT]]
++ [[https://www.git-scm.com/videos][What is Version Control and GIT?]]
++ [[https://www.git-scm.com/book/en/v2][GIT Book]]
+

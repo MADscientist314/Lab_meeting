@@ -1,0 +1,6 @@
+# #+TITLE: Digital Biology
+#+AUTHOR: Rodolfo Aramayo
+#+EMAIL: raramayo@tamu.edu
+#+STARTUP: align
+#
+**

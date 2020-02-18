@@ -1,0 +1,221 @@
+# #+TITLE: Digital Biology
+#+AUTHOR: Rodolfo Aramayo
+#+EMAIL: raramayo@tamu.edu
+#+STARTUP: align
+*Introduction*
++ About Unix OS
+ + The Unix operating system is made up of three parts; the kernel, the shell and the programs
++ The Kernel
+ + The kernel of UNIX is the hub of the operating system: it allocates
+   time and memory to programs and handles the filestore and
+   communications in response to system calls
++ The Shell
+ + The shell acts as an interface between the user and the kernel
+ + When a user logs in, the login program checks the username and password, and then starts another program called the shell
+ + The shell is a command line interpreter (CLI). It interprets the commands the user types in and arranges for them to be carried out
+ + The commands are themselves programs: when they terminate, the shell gives the user another prompt
+ + There are different shells that can be used. To see which one you are using, type:
+   : echo $SHELL
++ *$SHELL* is a system variable that is set for each user
++ The Terminal
+ + Is the program we use to talk to the shell
+ # + [[http://www.lynda.com/Linux-tutorials/Unix-philosophy/435539/482247-4.html][About Unix Philosophy]]
++ About Unix Philosophy
+ + This is the Unix philosophy:
+  + *Write programs that do one thing and do it well*
+  + *Write programs to work together*
+  + *Write programs to handle text streams, because that is a universal interface*
+    : DATA_IN ==> UNIX_PROGRAM_01 ==> DATA_OUT_01 ==> UNIX_PROGRAM_02 ==> DATA_OUT_02 ==> ...
+# + [[http://www.lynda.com/Linux-tutorials/Use-pipes-connect-commands-together/435539/482248-4.html][Pipes]]
+# + [[http://www.lynda.com/Linux-tutorials/Understand-how-commands-structured/435539/482234-4.html][Understand how commands are structured]]
+# + [[http://www.lynda.com/Linux-tutorials/Write-commands-shell-prompt/435539/482235-4.html][Write commands in a shell at the prompt]]
+# + [[http://www.lynda.com/Linux-tutorials/Helpful-keyboard-shortcuts-terminal/435539/482236-4.html][Helpful keyboard shortcuts in the terminal]]
+# + [[http://www.lynda.com/Linux-tutorials/Find-help-commands/435539/482237-4.html][Find help for commands]]
+# + [[http://www.lynda.com/Linux-tutorials/Explore-navigate-filesystem/435539/482239-4.html][Explore and navigate the filesystem]]
+# + [[http://www.lynda.com/Linux-tutorials/little-more-about-ls/435539/482240-4.html][A little more about 'ls']]
+# + [[http://www.lynda.com/Linux-tutorials/Create-remove-folders/435539/482241-4.html][Create and remove folders]]
+# + [[http://www.lynda.com/Linux-tutorials/Copy-move-delete-files-folders/435539/482242-4.html][Copy, move, and delete files and folders]]
+# + [[http://www.lynda.com/Linux-tutorials/Find-files-from-command-line/435539/482243-4.html][Find files from the command line]]
+# + [[http://www.lynda.com/Linux-tutorials/Understand-user-roles-sudo/435539/482244-4.html][Understand user roles and sudo]]
+# + [[http://www.lynda.com/Linux-tutorials/Understand-file-permissions/435539/482245-4.html][Understand file permissions]]
+# + [[http://www.lynda.com/Linux-tutorials/Peek-files-cat-head-tail-less/435539/482249-4.html][Peek at files with cat, head, tail, and less]]
+# + [[http://www.lynda.com/Linux-tutorials/Stdin-stdout-stderr-output-redirection/435539/482255-4.html][Stdin, stdout, stderr, and output redirection]]
+*Commandse*
++ Anatomy:
+  : Command_Name  Options  Arguments
++ Command Name
+  + Options
+    + - Leading Single Dash  
+	Can be "combined"
+    + -- Leading Double Dashes  
+	 Can not be "combined"
++ Examples:
+  : $ dir
+  : $ dir -l
+  : $ dir -lt
+  : $ dir -l --time=access
+------------
+*Basic Unix Documentation*
++ A "man page" is a text file containing a help document
++ Most commands have their own man page
++ Accessed with the *man* command
+ + The layout of a man page follows certain conventions
+  + Each man page is assigned a section # ((of a virtual UNIX manual) to which it belongs
+  + Each page itself is divided into sections
+  + The man command can search the NAME sections for keywords (-k option)
+  + The -M option can force man to read pages installed in non-default locations
+    : $ man ssh
+    : $ man rsync
++ Listing Directory Contents
+  : $ ls [options] [arguments]
+  : Commonly used options:
+  : -l = long format
+  : -a = all files--includes invisibles
+  : -t = modification time
+  : -r = reverse order
+  : -F = appemd type indicators
+  : -h = print sizes in human readable form
++ Changing Directories
+  : $ cd [options] [arguments]
+  : $ cd [directory name]
++ To switch to the most recent previously used directory:
+  : $ cd -
++ To switch to the parent directory of the current directory:
+  : $ cd ..
++ Stay in the current directory: 
+  : $ cd .
++ To list the name of the present working directory:
+  : $ pwd
++ To make a new directory:
+  : $ mkdir [directory_name]
++ To remove a directory (which must be empty):
+  : $ rmdir [directory_name]
++ Moving or Re-naming Files
+  : $ mv [source] [target]
++ If the source is a directory name, and:
+  + target is an existing dir, source dir is moved inside target dir
+  + target is new name, source dir is re-named to new name
++ If the source is a file name, and:
+  + target is an existing dir, source file is moved inside target dir
+  + target is a new name, source file is re-named to new name
++ Deleting Files
+  : $ rm [options] [file name]
++ Copying Files
+  : $ cp [options] [source] [target]
+*Other Useful Commands*
++ *type* Display's a command type:
+  : $ type [command]
++ *which* Display An Executable's Location:
+  : $ which [command]
++ *apropos* Display Appropriate Commands:
+  : $ apropos [command]
++ *whatis*  Display A Very Brief Description Of A Command:
+  : $ whatis [command]
++ *info* Displays A Program's Info Entry:
+  : $ info [command]
+*Peeking at and inside files*
++ *less* 
+  : $ less
++ *more* 
+  : $ more
++ *file* 
+  : file
++ [[http://beginnerlinuxtutorial.com/help-tutorial/basic-linux-commands/linux-more-and-less-commands/][Differences between 'less' and 'more']]
++ Command history
+  : $ history
+*Unix is Powerful*
++ *date*
+  : $ date
++ *cal*
+  : $ cal
+  : $ cal 2020
++ Creating symbolic links
+  : $ ln [options] [target] [link name]
+  : $ ln -s foo foolink
+*[[http://www.tldp.org/LDP/abs/html/io-redirection.html][Redirection:]] (Standard IN/OUT/ERR)*
++ *COMMAND_OUTPUT >*
+  + Redirect stdout to a file
+  + Creates the file if not present, otherwise overwrites it
+  + Creates a file containing a listing of the directory tree:
+    : $ ls -lR > dir-tree.list
++ *: > filename*
+  + The ">" truncates file "filename" to zero length
+  + If file not present, creates zero-length file (same effect as "*touch*")
+  + The ":" serves as a dummy placeholder, producing no output
++ *> filename*
+  + The ">" truncates file "filename" to zero length
+  + If file not present, creates zero-length file (same effect as "*touch*")
+  + Same result as "*: > filename*" above, but this does not work with some shells
++ *COMMAND_OUTPUT >>*
+  + Redirect "*stdout*" to a file
+  + Creates the file if not present, otherwise appends to it
+  + Redirect "*stdout*" to file "filename":
+    : $ 1>filename
+  + Redirect and append "*stdout*" to file "filename":
+    : $ 1>>filename
+  + Redirect "*stderr*" to file "filename":
+    : $ 2>filename
+  + Redirect and append "*stderr*" to file "filename":
+    : $ 2>>filename
+  + Redirect both **`stdout` and "*stderr*" to file "filename":
+    : $ &>filename
+  + Replaces "*stdin*" with myfiles:
+    : $ ls < myfiles
+*Combining Commands (Piping)*
++ Passes output from cmd1 to cmd2:
+  : $ cmd1 | cmd2
++ First executes cmd1, then cmd2:
+  : $ cmd1 ; cmd2
++ Executes cmd2 only on cmd1 success
+  : $ (cmd1 ; cmd2) 
+  : $ cmd1 && cmd2
++ Executes cmd2 only on cmd fail
+  : $ cmd1 || cmd2
++ The UNIX Filesystem
+  : $ cd /
+  : $ tree
+  : tree -df
++ Absolute Pathnames
+  : $ cd /home
+  : $ cd /usr/local
++ Relative Pathnames
+  : $ cd ../
+  : $ cd ~/Videos
+  : $ pwd
+  : $ cd ../../
+  : $ pwd
++ A Closer Look at  the *ls* Command
+ + [[./01C_Unix101.dir/Slide37.png][ls Command]]
++ [[http://en.flossmanuals.net/command-line/permissions/][File Ownership  and Permissions]]
+ + [[./01C_Unix101.dir/Slide38.png][Permissions]]
+ + [[./01C_Unix101.dir/Slide39.png][Directory Permissions]]
+ + [[http://ss64.com/bash/chmod.html][Permissions]]
+------------
++ The *chmod* Command
+ + [[./01C_Unix101.dir/Slide40.png][chmod]]
+------------
++ Disk Space
+  : du
+  : du -hd 0 .
+  : du -hd 1 .
+  : df
+  : df -h
++ Aliases
+  : ll
+  : alias ll
+  : alias ll="ls"
+  : ll
+  : unalias ll
++ To correct for this last command we might need to *reload* the SHELL Environmental variables
+  : source ~/.bashrc
+  : . ~/.bashrc
+*Shell Startup Files*
++ To see how many of these files are in your directory, we will combine the `ll` with a `wild_card: *`:
+  : $ ll ~/.bash*
++ To read these files we will use the program *less*
+  : $ less ~/.bashrc
+  : $ ~/.bash_profile
+------------
++ *Authors:* Rodolfo Aramayo - raramayo@tamu.edu
+------------
++ *License:* [[http://creativecommons.org/licenses/by-nc-sa/3.0/][All content produced in this site is licensed by: CC BY-NC-SA 3.0]]
