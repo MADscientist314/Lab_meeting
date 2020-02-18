@@ -1,6 +1,6 @@
-# #+TITLE: Digital Biology
-#+AUTHOR: Rodolfo Aramayo
-#+EMAIL: raramayo@tamu.edu
+# #+TITLE: Intro to Bioinformatics
+#+AUTHOR: Michael Jochum (forked from Rodolfo Aramayo)
+#+EMAIL: michael.jochum@bcm.edu
 #+STARTUP: align
 *SSH:SecureSHell*
 + Secure Shell is a cryptographic network protocol for secure data communication, remote
@@ -15,15 +15,15 @@
 #   + *[[http://www.lynda.com/Developer-Network-Administration-tutorials/Generating-key-pair-Mac-OS-X-Linux/189066/365619-4.html][Generating a key pair on Mac OS X or Linux]]*
 #   + *[[http://www.lynda.com/Developer-Network-Administration-tutorials/Connecting-SSH-server-from-Mac-OS-X-Linux-using-key/189066/365620-4.html][Connecting to an SSH server from Mac OS X and Linux using a key]]*
 ------------
-*SSH Into genomics08*
+*SSH Into the aagaardlab cluster*
 
-: $ Computer name: "genomics08.bio.tamu.edu"
-: $ Username: "YourNETIDUserName"
-: $ Password: "YourNETIDPasswd"
+: $ Computer name: "aagaardlab1"
+: $ Username: "YourUserName"
+: $ Password: "YourPasswd"
 
-+ Command:
++ Command: (only works while inside the bcm network)
 
-: $ ssh xxxx@genomics08.bio.tamu.edu
+: $ ssh xxxx@aagaardlab1
 
 + Once you access the computer:
   1. Verify where you are:
@@ -71,15 +71,15 @@
  # Setting up a config file
  # ./.ssh/config
  # Host g08
- #      User raramayo
- #      HostName genomics08.bio.tamu.edu
- #      IdentityFile /home/raramayo/.ssh/id_rsa
+ #      User jochum00
+ #      HostName aagaardlab1
+ #      IdentityFile /home/jochum00/.ssh/id_rsa
 6. SSH File Transfer Protocol (SFTP)
    1. Using [[https://filezilla-project.org/][Filezilla]]
    2. Copying files to your accounts
    3. Connecting via terminal
-      : sftp username@mdcs.tamu.edu
-      : sftp -oPort=22 username@mdcs.tamu.edu #<-To specify a different port
+      : sftp username@aagaardlab1
+      : sftp -oPort=22 username@aagaardlab1 #<-To specify a different port
 
      # + Then add your new key to the ssh-agent:
      #  ```sh
@@ -96,7 +96,7 @@
   # + Step 4: Log Into GitHub via web interface
   #   + Go to:
   #    ```sh
-  #    $ https://genomics03.bio.tamu.edu/gitlab/raramayo/db_your_name/deploy_keys
+  #    #$ https://genomics03.bio.tamu.edu/gitlab/raramayo/db_your_name/deploy_keys
   #    # where: your_name is your Name
   #    ```
   # + Step 5: Add the *id_rsa.pub* key to GitLab
