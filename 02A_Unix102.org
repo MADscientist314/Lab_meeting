@@ -1,0 +1,210 @@
+# #+TITLE: Digital Biology
+#+AUTHOR: Rodolfo Aramayo
+#+EMAIL: raramayo@tamu.edu
+#+STARTUP: align
+*Command Basics*
++ Command options: -v, --version, -h, --help 
++ Exit: q, x, ctrl + q, ctrl + x, or ESC
++ Force quit: ctrl + c or close window (but process may keep running)
++ About *echo*
+: echo "Hello World"
+: which echo
+: /bin/echo "Hello World"
+: whereis echo
+: whatis echo
++ How does the system *knows* where *echo* program is?
+*The PATH Variable*
++ The way Unix manages where to find programs is by using the *PATH* variable or environmental parameter
+: echo $PATH
++ Unix will test each listed directory for the presence/absence of the invoked program and traverse the directories until it finds it
++ Re-defining *PATH*
+: tatata
++ Deleting *PATH* variables 
+: which ls
+: PATH=/usr/bin # This deletes environmental PATH variables
+: which ls
+: ls
+  + Behavior only valid for the session in question 
++ Adding *PATH* variables
+: PATH=/home/username/bin:/home/username/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/username/software/bin # This adds a PATH
+*System Information Commands*
+: Date        # Date the computer was set to...
+: uptime      # Reports the time the system is on
+: users       # Displays the users log into the system
+: who         # Displays the number of connections of the users log into the system
+: uname -ap   # Displays the system info
+*Disk Information Commands*
+: df    # Disk Free Space
+: df -h # Humanized and size calculaated as base2 <-Preferred as it is more compatible
+: df -H # Humanized and size is calculated as base10
++ *df*
+: du          # Disk Usage
+: du -h       # Humanized
+: du -ha      # Humanized and all files
+: du -hd 1    # Depth option of one
+  + *df* Displays size set aside by the system on a Hard Drive (blocks)
+  + Compare *du -hd 1* with *ls -alh*
+  + Allocation of a file versus size of a file
+*Viewing Processes*
+: Bash --> Kernel --> Memory Allocation + Runs Process, Completes Process --> Informs BASH Process is done
++ Process can be very short or very long
++ Process can be background process
+: ps          # Only own by me
+: ps a        # All user processes. Note that ps -a and ps a might not be equivalent
+: ps aux a(show me ALL processes) u(include the USER that is running the process) x(show me the background processes
+*Monitoring Processes*
+: top
+: top -n 10 -U username
+: top and then ?
+: top and then U
+: htop
++ Show start and end of a process
+*Stopping Processes*
++ Process ID identification
++ kill versus kill -9
+: kill        # 'Natural' kill
+: kill -9     # Force kill (this is brutal...)
+*Text File Helpers*
++ *Text Files, NOT Microsoft Word Files are NOT TEXT Files*
++ Retrieve a GTF and a Fasta File...
++ *wc*
+: wc # Word Count (lines/words/characters)
+: wc -l versus wc -c
++ *sort*
+: sort # Sort lines
+: sort -r     # Reverse
+: sort -n     # Numerical
+: sort -f     # Ignore case
+: sort -u     # Unique
++ *uniq*
+: uniq        # Filter in/out repeated lines
+: uniq -d     # Returns repeated lines
+: uniq -u     # Returns unduplicated lines
+*Utility Programs*
++ *cal/ncal: Calendar*
+: cal
+: cal 12 2020
+: cal 2000
+: ncal
++ *bc: Bench Calculator*
+: bc
+:   1000/9
+:   scale=10
+:   1000/9 
+: bc -l # Precission
++ *expr: Expression Evaluator*
+: expr 1+1          # <-Does Not work (entire argument)
+: expr 1 + 1        # Does work (separate arguments)
+: expr 1133 * 2245  # <-Does Not work (* is a wild-card and has special meaning)
+: expr 1133 \* 2245 # <-Does work (escaped characters)
+: expr 24 = 34
+: expr 24 = 244
++ *units: Unit Conversion*
+: units # foot to meter, degF to degC
+: control + c to quit
+: units '37 degC' 'degF'
+*Using the command History*
++ All info is stored in the *.bash_history* file
+: history
+: history !(number of the command we wish to execute)
+: !-(number of the command ago, we wish to run)
++ This is a moving target
+: !! # same as !-1. Very useful command
+: !$ # Calls the arguments to the entire last command
+: history -d (line number)
+: history -c # clears ALL history
+*Standard Input and Standard Output*
++ Files live in /dev
+: stdin       # Input
+: stdout      # Output
+*Directing Output to a file*
++ Default output is the screen
+: cat file
+: cat file > newfile
+: banner "TAMU"
+: banner "TAMU" > tamu.txt
+*Appending Output to a file*
++ The difference between *>* versus *>>*
+*Directing Input from a file*
++ Generate a file containing unique and repeated values
+: wc file versus wc < file versus cat file | wc
++ Generate a file containing a numerical expression (NE)
+: echo "NE" | bc versus bc < NE versus cat NE | bc
+*Piping Output to Input*
++ Using the *|* (PIPE)
+: echo "Hello World"
+: echo "Hello World" | wc
+: echo "2+2" | bc
+*Suppressing Output*
++ When you do not need the output
+: redirect to /dev/null (/dev/null is a special device that is inactive)
+: ls -al > /dev/null
+: echo < /dev/null
+*Profile, Login and Resource Files*
++ /etc/profile # System files activated upon login to a Bash shell
++ /home/username/   # Not visible
+  + ~/.bash_profile
+  + ~/.bashrc
+  + ~/.bash_aliases
+  + ~/.bash_logout
+  + ~/.profile
++ In ~/.bashrc
+: if [ -f ~/.bash_aliases ]; then
+:     . ~/.bash_aliases
+: fi
+*Setting Command Aliases*
+: alias
+: alias Hi='echo "Hello World"' # Pay attention to the 'pairing of quotes'
+: Hi
+: unalias Hi
++ Aliases only last for the duration of the session *unless* you define them in the: *~/.bash_aliases* file (configuration file)
+*Setting and exporting environmental variables*
+: MYNAME='your name'
+: echo $MYNAME
++ To make these changes permanent put these variables in the *~/.bashrc or ~/.bash_profile* files
++ To make this available to Bash and its subshells you need to *export* the environmental variable
+: export MYNAME='your name' 
++ Setting up *less* with the *-M* and the *-S* flags permanently
+*Setting the PATH variable*
+: echo $PATH
+: which less
+: PATH='' # Nullifies all PATHS
+: less # Cannot be found
+: /usr/bin/less
+*Configuring history with variables*
++ Look at the ~/.bashrc file HISTORY variables
+: history
+: export HISTTIMEFORMAT='%b %d %I:%M %p' # Using strftime format
+: history
+: export HISTIGNORE="history:pwd" # Ignored the history and the pwd commands
++ [[http://strftime.net/][strftime]]
+*Customizing the command prompt*
+: echo $PS1
+: \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$
++ Command Prompt Formatting Codes
+| Code       | Output                                            |
+| \u         | username                                          |
+| \s         | current shell                                     |
+| \w         | current working directory                         |
+| \W         | basename of current working directory             |
+| \d         | date in "weekday month day" format ("Tue Mar 22") |
+| \D{format} | date in strftime format ("%Y-%m-%d")              |
+| \A         | time in 24-hour HH:MM format                      |
+| \t         | time in 24-hour HH:MM:SS format                   |
+| \@         | time in 12-hour HH:MM am/pm format                |
+| \T         | time in 12-hour HH:MM:SS format                   |
+| \H         | hostname                                          |
+| \h         | hostname up to first "."                          |
+| \!         | history number of this command                    |
+| \$         | when UID is 0 (root), a "#", otherwise a "$"      |
+| \\         | a literal backslash                               |
++ Play with *PS1="Code"*
+*Logout file*
+: # ~/.bash_logout: executed by bash(1) when login shell exits.
+: 
+: # when leaving the console clear the screen to increase privacy
+: 
+: if [ "$SHLVL" = 1 ]; then
+:     [ -x /usr/bin/clear_console ] && /usr/bin/clear_console -q
+: fi
++ Whatever commands you add here will be executed when you log out
