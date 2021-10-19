@@ -1,93 +1,175 @@
-<mxfile host="app.diagrams.net" modified="2021-10-19T15:00:13.692Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36 Edg/94.0.992.50" etag="foRl3CDEolsIFFId1tGz" version="15.5.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-19T15:42:44.781Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36 Edg/94.0.992.50" etag="bYGhUdkTfsp5FDwsUG1n" version="15.5.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1414" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1414" dy="1988" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-2" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="WRM9larUtkGdJBmbHmk5-2" edge="1">
+        <mxCell id="WRM9larUtkGdJBmbHmk5-107" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="20" y="-1153" width="753.5" height="1145" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WIyWlLk6GJQsqaUBKTNV-3">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="170" y="120" as="targetPoint" />
-            <Array as="points" />
+            <mxPoint x="87.66666666666674" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="Preprocessing" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="80" y="50" width="120" height="40" as="geometry" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="Preprocessing" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WRM9larUtkGdJBmbHmk5-107" vertex="1">
+          <mxGeometry x="27.5" y="125" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-0" value="&lt;div&gt;&lt;span&gt;a. Data&amp;nbsp;&lt;/span&gt;&lt;span&gt;Filtering&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;i.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Non-relevant datasets&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;ii.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Features with &amp;gt; 5 responses&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;iii.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Subjects with &amp;lt; 5 features&lt;br&gt;&lt;/span&gt;&lt;span&gt;b.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Data wrangling&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;i.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Convert code list to variable name&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;ii.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Convert NA values&lt;br&gt;&lt;/span&gt;&lt;span&gt;c.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Data transformation&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;i.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Normalization / transformation&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;ii.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Edinburgh score permutations&lt;br&gt;&lt;/span&gt;&lt;span&gt;d.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Data splitting&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;i.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Split remaining datasets by category&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;ii.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Convert datasets to individual Gower distance matrices&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="260" y="10" width="370" height="220" as="geometry" />
+        <mxCell id="WRM9larUtkGdJBmbHmk5-10" value="&lt;div style=&quot;text-align: left&quot;&gt;Supervised Machine learning Classification of PAM Clusters&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="2.5" y="870" width="170" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-2" value="Unsupervised Machine Learning" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="80" y="140" width="120" height="40" as="geometry" />
+        <mxCell id="WRM9larUtkGdJBmbHmk5-21" value="Results: Identify Trends, Patterns, and Relationships" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry y="985" width="175" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-3" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="WRM9larUtkGdJBmbHmk5-2" parent="WIyWlLk6GJQsqaUBKTNV-1" target="WRM9larUtkGdJBmbHmk5-4">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="230" y="190" as="targetPoint" />
-            <Array as="points" />
-          </mxGeometry>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-10" target="WRM9larUtkGdJBmbHmk5-21">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-4" value="Supervised Machine Learning" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="80" y="230" width="120" height="40" as="geometry" />
+        <mxCell id="WRM9larUtkGdJBmbHmk5-23" value="Conclusions / Deliverables" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="27.5" y="1071" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-5" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" source="WRM9larUtkGdJBmbHmk5-4" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="140" y="320.0000000000001" as="targetPoint" />
+        <mxCell id="WRM9larUtkGdJBmbHmk5-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-21" target="WRM9larUtkGdJBmbHmk5-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-30" value="" style="group" vertex="1" connectable="0" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="207.5" width="450" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-0" value="&lt;span&gt;a. Data&amp;nbsp;&lt;/span&gt;&lt;span&gt;Filtering&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;i.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Non-relevant datasets&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;ii.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Features with &amp;gt; 5 responses&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;iii.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Subjects with &amp;lt; 5 features&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-30">
+          <mxGeometry x="80" y="10" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-24" value="&lt;div&gt;&lt;span&gt;b.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Data wrangling&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;i.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Convert code list to variable name&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;ii.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Convert NA values&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-30">
+          <mxGeometry x="80" y="90" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-25" value="&lt;span&gt;c.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Data transformation&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;i.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Normalization / transformation&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;ii.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Edinburgh score permutations&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-30">
+          <mxGeometry x="80" y="150" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-26" value="&lt;div&gt;&lt;span&gt;d.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Data splitting&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;i.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Split remaining datasets by category&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span&gt;ii.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Convert datasets to individual Gower distance matrices&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-30">
+          <mxGeometry x="80" y="210" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-29" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;align=left;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-30">
+          <mxGeometry width="100" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WIyWlLk6GJQsqaUBKTNV-3" target="WRM9larUtkGdJBmbHmk5-29">
+          <mxGeometry x="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-2" value="Unsupervised Machine Learning" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="27.5" y="352" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-36" value="a.	Model fit PAM cluster gower distance matrix on 2:48 clusters" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="297" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-37" value="b.&lt;span&gt;	&lt;/span&gt;Select best model based on silhouette distance" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="337" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-38" value="c.&lt;span&gt;	&lt;/span&gt;Append cluster memberships to individual datasets" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="377" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-39" value="d.&lt;span&gt;	&lt;/span&gt;Make T-sne pca visualizations for individual datasets colored by PAM cluster" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="412" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-40" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;align=left;container=1;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="207.5" y="287" width="100" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.002;entryY=0.504;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-2" target="WRM9larUtkGdJBmbHmk5-40">
+          <mxGeometry x="37.5" y="287" as="geometry">
+            <mxPoint x="197.5" y="372" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="140" y="280" />
-              <mxPoint x="140" y="280" />
+              <mxPoint x="182.5" y="372" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-6" value="Cluster Contributions" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="80" y="320" width="120" height="40" as="geometry" />
+        <mxCell id="WRM9larUtkGdJBmbHmk5-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-36" target="WRM9larUtkGdJBmbHmk5-36">
+          <mxGeometry x="207.5" y="287" as="geometry" />
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-7" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" source="WRM9larUtkGdJBmbHmk5-6" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="WRM9larUtkGdJBmbHmk5-50" value="Supervised Machine Learning" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="27.5" y="535" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-2" target="WRM9larUtkGdJBmbHmk5-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-6">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="140" y="410" as="targetPoint" />
+            <mxPoint x="267.4999999999998" y="680.3333333333335" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-6" value="Cluster Contributions" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="27.5" y="660" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-50" target="WRM9larUtkGdJBmbHmk5-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-8" target="WRM9larUtkGdJBmbHmk5-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-8" value="Combined dataset Unsupervised Clustering" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="7.5" y="741" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-6" target="WRM9larUtkGdJBmbHmk5-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-52" value="&lt;span style=&quot;text-indent: -24px&quot;&gt;a.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-indent: -24px&quot;&gt;Randomly subsample the individual datasets into 80% training : 20% testing&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="480" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-53" value="b.&amp;nbsp;Build classification models for PAM clusters ID using features in training dataset" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="520" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-54" value="c. Validate models using testing dataset (&amp;gt;95% accuracy for all models)" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="560" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-55" value="d.&amp;nbsp;Output Model Metrics (Accuracy, Kappa scores, and Confusion matrices)" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="595" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-56" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;align=left;container=1;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="207.5" y="470" width="100" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.002;entryY=0.504;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-50" target="WRM9larUtkGdJBmbHmk5-56">
+          <mxGeometry x="37.5" y="470" as="geometry">
+            <mxPoint x="197.5" y="555" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="140" y="370" />
-              <mxPoint x="140" y="370" />
+              <mxPoint x="182.5" y="555" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-8" value="Combined Clustering" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="80" y="410" width="120" height="40" as="geometry" />
+        <mxCell id="WRM9larUtkGdJBmbHmk5-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-52" target="WRM9larUtkGdJBmbHmk5-52">
+          <mxGeometry x="207.5" y="470" as="geometry" />
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-9" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" source="WRM9larUtkGdJBmbHmk5-8" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="140" y="500" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="140" y="460" />
-              <mxPoint x="140" y="460" />
-            </Array>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-71" value="a. Obtain feature variable importance scores for each PAM cluster ID from the supervised classification model" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="660" width="323" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="207.5" y="650" as="geometry">
+            <mxPoint x="452.5" y="690" as="sourcePoint" />
+            <mxPoint x="452.5" y="690" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-10" value="Combined Classification" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="80" y="500" width="120" height="40" as="geometry" />
+        <mxCell id="WRM9larUtkGdJBmbHmk5-87" value="&lt;div&gt;&lt;span&gt;a.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Make a dataset that only includes the index and features that made contributions to the individual PAM clustering models.&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;b.&lt;span&gt;	&lt;/span&gt;Convert the combined dataset into a Gower distance Matrix&lt;/div&gt;&lt;div&gt;c.&lt;span&gt;	&lt;/span&gt;Fit an unsupervised PAM cluster model on gower distance matrix 2:48 clusters&lt;/div&gt;&lt;div&gt;d.&lt;span&gt;	&lt;/span&gt;Select best model based on silhouette distance&lt;/div&gt;&lt;div&gt;e.&lt;span&gt;	&lt;/span&gt;Append cluster memberships to combined dataset&lt;/div&gt;&lt;div&gt;f.&lt;span&gt;	&lt;/span&gt;Make T-sne pca visualizations colored by PAM cluster&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="708" width="456" height="106" as="geometry" />
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-20" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="140" y="540" as="sourcePoint" />
-            <mxPoint x="140" y="590" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="140" y="550" />
-              <mxPoint x="140" y="550" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-8" target="WRM9larUtkGdJBmbHmk5-87">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-21" value="Results: Trends, Patterns, and Relationships" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="80" y="590" width="120" height="40" as="geometry" />
+        <mxCell id="WRM9larUtkGdJBmbHmk5-89" value="&lt;div&gt;&lt;span&gt;a.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;Randomly subsample data into 80% training /20% testing&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;b.&lt;span&gt;	&lt;/span&gt;Build classification model for PAM cluster ID using features in training dataset&lt;/div&gt;&lt;div&gt;c.&lt;span&gt;	&lt;/span&gt;Validate models using testing dataset (&amp;gt;96.8% accuracy)&lt;/div&gt;&lt;div&gt;d.&lt;span&gt;	&lt;/span&gt;Output Model Metrics&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;i.&lt;span&gt;	&lt;/span&gt;Accuracy&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;ii. Kappa scores&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;iii.&lt;span&gt;	&lt;/span&gt;Confusion Matrix&lt;/div&gt;&lt;div&gt;e.&lt;span&gt;	&lt;/span&gt;Obtain variable importance scores for features&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="835" width="456" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-22" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" source="WRM9larUtkGdJBmbHmk5-21" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="140" y="680" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="140" y="640" />
-              <mxPoint x="140" y="640" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-90" value="&lt;div&gt;&lt;span&gt;a.&lt;/span&gt;&lt;span&gt;&amp;nbsp;Report&amp;nbsp;&lt;/span&gt;&lt;span&gt;top contributing features for each PAM cluster based on variable importance&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;b. Make Data visualisations&amp;nbsp;and statistical&amp;nbsp;test on contributing features&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="985" width="476" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="WRM9larUtkGdJBmbHmk5-23" value="Conclusions / Deliverables" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="80" y="680" width="120" height="40" as="geometry" />
+        <mxCell id="WRM9larUtkGdJBmbHmk5-91" value="&lt;div&gt;&lt;span&gt;a.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;A model that can predict maternal morbidity with 96.8% accuracy when given a subset of features utilizing A list of contributing factors&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="1040" width="476" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-92" value="&lt;div&gt;&lt;span&gt;b.&lt;/span&gt;&lt;span&gt;	&lt;/span&gt;&lt;span&gt;A report containing discriminant latent features bases on contributions to combined PAM clusters containing variable importance scores associated&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="277.5" y="1090" width="476" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-98" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;align=left;" vertex="1" parent="WRM9larUtkGdJBmbHmk5-107">
+          <mxGeometry x="198.5" y="1034" width="80" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-10" target="WRM9larUtkGdJBmbHmk5-89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-21" target="WRM9larUtkGdJBmbHmk5-90">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WRM9larUtkGdJBmbHmk5-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WRM9larUtkGdJBmbHmk5-107" source="WRM9larUtkGdJBmbHmk5-23" target="WRM9larUtkGdJBmbHmk5-98">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
